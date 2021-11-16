@@ -78,6 +78,10 @@ Route::get('/single', function (){
 Route::get('/terms', function (){
     return view('pages.terms');
 });
+
+Route::get('/dashboard', function (){
+    return view('pages.dashboard');
+});
 //Route::put('product/{id}', [ProductController::class, 'update']);
 
 Route::resource('user', UserController::class);

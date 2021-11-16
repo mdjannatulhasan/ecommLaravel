@@ -90,7 +90,6 @@
 
     </div>
 </div>
-</div>
 
 <!--content-->
 <div class="content-mid">

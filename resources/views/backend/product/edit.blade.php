@@ -81,7 +81,6 @@
     </div>
 
 
-
 {{--    <div class="container">--}}
 {{--        <h4>Edit Product</h4>--}}
 {{--        <a href="{{ route('product.index') }}" class="btn btn-primary">Back</a>--}}
@@ -126,4 +125,5 @@
 {{--        </div>--}}
 {{--        {!! Form::close() !!}--}}
 {{--    </div>--}}
+
 @endsection

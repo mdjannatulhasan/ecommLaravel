@@ -25,14 +25,19 @@ class ProductController extends Controller
     public function store(Request $request){
 
         $data = $request->all();
-        $imagePath = request('image')->store('uploads/products','public');
-        $products = Product::create([
-            'title' => $data['title'],
-            'description' => $data['description'],
-            'category_id' => $data['category_id'],
-            'prize' => $data['prize'],
-            'image' => $imagePath,
-        ]);
+        dd($data);
+        if(array_key_exists('image', $request->all())){
+            $imagePath = request('image')->store('uploads/products','public');
+            $products = Product::create([
+                'title' => $data['title'],
+                'description' => $data['description'],
+                'category_id' => $data['category_id'],
+                'prize' => $data['prize'],
+                'image' => $imagePath,
+            ]);
+        }else{
+            $products = Product::create($request->all());
+        }
         return redirect()->route('product.index');
     }
     public function show($id){

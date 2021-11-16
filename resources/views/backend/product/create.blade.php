@@ -4,14 +4,12 @@
 {{--        <h4>Create Product</h4>--}}
 {{--        <a href="{{ route('product.index') }}" class="btn btn-primary">Back</a>--}}
 {{--        {!! Form::open (['route' => 'product.store', 'method' => 'POST']) !!}--}}
-
 {{--        <div class="form-group row">--}}
 {{--            {!! Form::label('title','Title :' ,['class' => 'col-sm-2 col-form-label']) !!}--}}
 {{--            <div class="col-sm-10">--}}
 {{--                {!! Form::text('title','', ['class' => 'form-control']) !!}--}}
 {{--            </div>--}}
 {{--        </div>--}}
-
 {{--        <div class="form-group row">--}}
 {{--            {!! Form::label('category_id','Category :' ,['class' => 'col-sm-2--}}
 {{--            col-form-label']) !!}--}}

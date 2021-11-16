@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="css/adminStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5cbfd0d562.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="d-flex" id="page-columns">
+        <div class=" bg-dark"  id="sidebar" style="transition: all linear 300ms;">
+            <div class="py-4">
+                <div class="logo">
+                    <img class="img-fluid bg-white rounded-circle p-1" src="assets/images/logo.svg" alt="" width="50">
+                    <span class="ml-3 site-title font-weight-bold"><span class="link-title">Dashboard kit</span> </span>
+                </div>
+            </div>
+
+            <div class="nav sidebar-links-top flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="link-wrapper active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="fas fa-chart-pie"></i><span class="link-title">Overview</span></a>
+                <a class="link-wrapper" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i class="fas fa-ticket-alt"></i></i><span class="link-title">Tickets</span></a>
+                <a class="link-wrapper" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><i class="fas fa-lightbulb"></i><span class="link-title">Ideas</span></a>
+                <a class="link-wrapper" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-users"></i><span class="link-title">Contacts</span></a>
+                <div class="minimize"><i class="fas fa-ellipsis-h"></i></div>
+            </div>
+        </div>
+        <div class="body-container">
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light body-nav">
+                        <a class="navbar-brand" href="#">Overview</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                            </ul>
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2 custom-search" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn my-2 my-sm-0 custom-search-icon" type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                            <div><a href=""><i class="fas fa-bell custom-bell"></i></div></a>
+                            <div class="vertical-line"></div>
+                            <div class="user-meta d-flex align-items-center">
+                                <h5 class="username mr-3"> Jones Ferdinand </h5>
+                                <div class="user-img">
+                                    <img src="assets/images/userimg.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+
+                </div>
+
+
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">2222222</div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">333333333</div>
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">444444</div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        var dd = 0;
+        $(".minimize").click(function(){
+            $(".link-title").toggleClass("hidden");
+            $(".body-container").toggleClass("width-controller-body");
+
+            if(dd==0){
+                $("#sidebar").css("width","5vw");
+                dd=1;
+            }else{
+                $("#sidebar").css("width","16vw");
+                dd=0;
+            }
+
+        });
+
+    </script>
+</body>
+</html>
