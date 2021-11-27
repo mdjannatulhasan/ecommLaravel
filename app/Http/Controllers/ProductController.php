@@ -25,7 +25,7 @@ class ProductController extends Controller
     public function store(Request $request){
 
         $data = $request->all();
-        dd($data);
+//        dd($data);
         if(array_key_exists('image', $request->all())){
             $imagePath = request('image')->store('uploads/products','public');
             $products = Product::create([

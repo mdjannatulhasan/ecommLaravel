@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\UserController;
@@ -79,9 +81,7 @@ Route::get('/terms', function (){
     return view('pages.terms');
 });
 
-Route::get('/dashboard', function (){
-    return view('pages.dashboard');
-});
+Route::get('dashboard', [DashboardController::class, 'index']);
 //Route::put('product/{id}', [ProductController::class, 'update']);
 
 Route::resource('user', UserController::class);

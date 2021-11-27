@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('ecommerce/css/adminStyle.css') }}" rel="stylesheet">
     <style>
         td,th{
             vertical-align: middle !important;
@@ -34,7 +35,7 @@
     </style>
 </head>
 <body>
-        <main class="py-4">
+        <main class="">
             @yield('content')
         </main>
 </body>

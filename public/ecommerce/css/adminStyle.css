@@ -100,3 +100,29 @@
 .body-container{
     min-width: 84vw;
 }
+
+
+ul{
+    list-style-type: none;
+}
+.admin-product{
+    display: flex;
+}
+.admin-product div{
+    margin: 5px;
+}
+tr td:last-child{
+    display: flex;
+    align-items: center !important;
+}
+tr, td, th{
+    vertical-align: middle !important;
+}
+tr:first-child td:last-child{
+    border: 0 !important;
+}
+tr td:last-child a{
+    margin-right: 10px;
+
+}
+
